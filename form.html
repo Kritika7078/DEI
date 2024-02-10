@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1{
+            text-align: center;
+            font-size: 49px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label, input, textarea {
+            display: block;
+            margin-bottom: 15px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #d81619;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contact Us</h1>
+
+<form action="submit.php" method="post">
+    <div class="container">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Full Name">
+
+    <label for="phone">Phone number:</label>
+    <input type="text" id="phone" pattern="[789][0-9]{9}" name="phone" placeholder="10-digit contact number">
+
+    <label for="aadhar">Aadhar:</label>
+    <input type="text" id="aadhar" name="aadhar" placeholder="Your aadhar no.">
+
+    <!-- Add Submit Button -->
+    <button class="submit"><a href="index.html">Submit</a></button>
+</div>
+</form>
+<h2>BLEND BRIDGE</h2>
+
+</body>
+</html>
+<script>
+    let btn = document.querySelector('.submit');
+    btn.addEventListener("click", function() {
+        alert('The form is submitted successfully');
+    });
+</script>
+
+</body>
+</html>
